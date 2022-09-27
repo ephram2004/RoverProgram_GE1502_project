@@ -1,38 +1,321 @@
-.App {
+body {
+  background-color: #e5e9f1;
+}
+
+.titleblock {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #003600;
+  color: white;
+  font-family: "Baufra Bold";
   text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spacetop {
+  width: 100%;
+  height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.userinput {
+  position: fixed;
+  background-color: #003600;
+  width: 98%;
+  height: 67%;
+  border-radius: 50px;
+  font-family: "Baufra Semi";
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dashboard {
+  display: block;
+  position: absolute;
+  background-color: white;
+  height: 450px;
+  width: 600px;
+  top: 25px;
+  bottom: 25x;
+  left: 25px;
+  border-radius: 50px;
+
+}
+
+#connection {
+  width: 150px;
+  left: 30px;
+  padding-top: 15px;
+  position: absolute;
+}
+
+#run {
+  width: 175px;
+  padding-top: 6px;
+  left: 420px; 
+  position: absolute;
+}
+
+img {
+  float: left;
+  width: 25px;
+  height: 25px;
+}
+
+.runstatus {
+  width: 50px;
+  height: 50px;
+}
+
+h5 {
+  padding-left: 10px;
+  bottom: 16px;
+  position: relative;
+  float: right;
+}
+
+.statustext {
+  right: 43px;
+}
+
+.runtext {
+  bottom: 7px;
+  right: 31px;
+}
+
+.bigcircle {
+  position: relative;
+  text-align: center;
+  top: 90px;
+  left: 70px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 125px;
+  border-color: green;
+  width: 250px;
+  height: 250px;
+}
+
+.battval {
+  position: relative;
+  font-family: "Baufra Bold";
+  font-size: 300%;
+  top: 50px;
+}
+
+
+.buttonContainer {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.center {
+  padding-left: 120px;
+  width: 200px;
+}
+
+.play {
+  left: 77%;
+  top: 50%;
+}
+
+.steps {
+  bottom: 17px;
+  right: 40px;
+  position: relative;
+  float: left;
+}
+
+.stepSecond {
+  bottom: 12px;
+  right: 60px;
+  position: relative;
+  float: left;
+}
+
+.secondstepstat {
+  bottom: 4px;
+  right: 42px;
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 150px;
+  height: 40px;
+  right: 19px;
+  border-radius: 10px;
+  border: 2px solid green;
+  cursor: pointer;
+  transition-duration: 1s all ease;
+  color: black;
+}
+
+.btn::before {
+  background: green;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover:before {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  color: white;
+}
+
+.upload {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 10px;
+  left: 45px;
+}
+
+.upload:hover {
+  color: white;
+}
+
+
+.start {
+  left: 80px;
+  bottom: 68px;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+.reload {
+  left: 91%;
+  top: 86%;
+  color: silver;
+  font-size: 40px;
+  transition-duration: .5s;
+}
+
+.icon {
+  position: absolute;
+  transform: rotate(50deg);
+  cursor: pointer;
+  transition-duration: .5s;
+}
+
+.icon:hover {
+  transform: rotate(150deg);
+  color: dimgray;
+}
+
+.inputs {
+  position: relative;
+  height: 85%;
+  width: 45%;
+  left: 750px;
+  top: 25px;
+}
+
+.spacebottom1 {
+  padding: 30px;
+  float: left;
+}
+
+.lw {
+  display: block;
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  padding-left: 10px;
+  padding-top: 40px;
+  border-radius: 50px;
+}
+
+.container {
+  height: 100%;
+  padding-top: 181px;
+}
+
+.spacebottom {
+  padding: 15px;
+  padding-left: 30px;
+  padding-bottom: 65px;
+}
+
+.long {
+  position: fixed;
+  background-color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 15px;
+  border-radius: 50px;
+  width: 40%;
+  height: 8%;
+}
+
+.text {
+  position: relative;
+  bottom: 58px;
+  left: 80px;
+  width: 30%;
+  height: 50%;
+}
+
+.measure {
+  position: relative;
+  bottom: 58px;
+  left: 83px;
+}
+
+.dropdown {
+  position: relative;
+  height: 100%;
+  width: 70%;
+  bottom: 40px;
+  left: 130px;
+}
+
+
+
+
+@font-face {
+  font-family: "Baufra Semi";
+  src: url("../fonts/Baufra/Baufra-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Baufra Bold";
+  src: url("../fonts/Baufra/Baufra-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Baufra Light';
+  src: url("../fonts/Baufra/Baufra-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Baufra';
+  src: url("../fonts/Baufra/Baufra-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
